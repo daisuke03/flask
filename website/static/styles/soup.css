@@ -1,0 +1,113 @@
+body{
+	background-color: black;
+position: relative;
+	color: white;
+}
+
+h1{
+	background-color: black;
+	color: lime;
+	text-align:center;
+	border-color: lime;
+	font-size: calc(2vh + 2vw); 
+	font-family:Coda;
+}
+h2{
+	background-color: white;
+	color: black;
+	text-align:center;
+	border-color: white;
+	border: 5px double;
+	font-family:Comic Sans MS;
+}
+h3{
+	background-color: black;
+	color: grey;
+	text-align: center;
+	border-color: white;
+	font-family: 'Coda', cursive;
+        font-size: calc(0.7vh + 0.7vw); 
+}
+h4{
+	color: white;
+	text-align: left;
+	border-color: lime;
+	border: 2px single;
+        font-family: 'Fira Mono', monospace;
+        font-size: calc(0.6vh + 0.6vw); 
+}
+
+p{
+	background-color: black;
+	color: lime;
+	text-align:center;
+        font-size: calc(1.5vh + 1.5vw); 
+	font-family:Coda;
+}
+
+table{
+  margin: 0 auto;;
+}
+th,td{
+	background-color: black;
+	color: lime;
+	text-align: left;
+        padding: 0 calc(1vh + 1vw);
+        font-size: calc(0.7vh + 0.7vw);
+        font-family: 'Fira Mono', monospace;
+}
+a:visited,a:link{
+   color: turquoise;
+}
+
+
+@keyframes flicker {
+0% { opacity: 0.0293 }
+5% { opacity: 0.18641 }
+10% { opacity: 0.5343 }
+15% { opacity: 0.35872 }
+20% { opacity: 0.85246 }
+25% { opacity: 0.01529 }
+30% { opacity: 0.70429 }
+35% { opacity: 0.65543 }
+40% { opacity: 0.10791 }
+45% { opacity: 0.47366 }
+50% { opacity: 0.73384 }
+55% { opacity: 0.11897 }
+60% { opacity: 0.87237 }
+65% { opacity: 0.78432 }
+70% { opacity: 0.44202 }
+75% { opacity: 0.34167 }
+80% { opacity: 0.23108 }
+85% { opacity: 0.14169 }
+90% { opacity: 0.56139 }
+95% { opacity: 0.45485 }
+100% { opacity: 0.48556 }
+}
+body::after{
+content: " ";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(18, 16, 16, 0.1);
+opacity: 0;
+z-index: 2;
+pointer-events: none;
+animation: flicker 0.15s infinite;
+}
+body::before{
+content: " ";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+z-index: 2;
+background-size: 100% 2px, 3px 100%;
+pointer-events: none;
+}
