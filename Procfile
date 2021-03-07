@@ -1,1 +1,1 @@
-web: gunicorn -bind 0.0.0.0$PORT app:main.py
+web: gunicorn gettingstated.wsgi --log-file -
